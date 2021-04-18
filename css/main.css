@@ -138,7 +138,7 @@ nav .nav-ul-show {
 }
 
 .homepage {
-  background-image: url("/images/img-hp.png");
+  background-image: url("../images/img-hp.png");
   height: calc(100vh - 87px);
   background-size: cover;
   display: -webkit-box;
