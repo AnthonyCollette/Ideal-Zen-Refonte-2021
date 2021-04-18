@@ -1,0 +1,59 @@
+.homepage {
+  background-image: url("/images/img-hp.png");
+  height: calc(100vh - 87px);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 100px;
+  h1 {
+    font-size: 58px;
+    font-family: $secondary-font;
+    color: $primary-color;
+    margin-top: 100px;
+  }
+  #author {
+    font-size: 35px;
+    font-family: $secondary-font;
+    color: $primary-color;
+  }
+  a {
+    color: $primary-color;
+    font-size: 36px;
+    position: absolute;
+    bottom: 10%;
+    transition: 0.4s;
+    &:hover {
+      transform: translateY(20px);
+    }
+  }
+}
+
+.text {
+  background-color: $secondary-color;
+  padding: 40px;
+  font-size: 18px;
+  color: white;
+  font-family: $primary-font;
+  position: relative;
+  img {
+    position: absolute;
+  }
+}
+
+#homepage-text {
+  .text {
+    margin: 140px 0 400px 20%;
+    max-width: 40%;
+    p:nth-child(2) {
+      margin-top: 20px;
+    }
+    img {
+      z-index: -1;
+      top: 40%;
+      left: 75%;
+      max-width: 100%;
+    }
+  }
+}

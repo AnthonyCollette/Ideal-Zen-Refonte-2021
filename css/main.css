@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3px;
+  padding: 20px 50px;
+  position: relative;
+}
+
+header .header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1620px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+nav {
+  display: none;
+}
+
+@media (min-width: 1400px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul li {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: #5baaa6;
+}
+
+nav .nav-ul-show {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: absolute;
+  right: 0;
+  top: 84px;
+  background-color: white;
+  z-index: 999;
+}
+
+.show li {
+  border-top: solid 1px #5baaa6;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.chevron-show:before {
+  border-style: solid;
+  border-width: 0.15em 0.15em 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  top: 0.3em;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  vertical-align: top;
+  width: 0.45em;
+  margin-right: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.chevron-show:hover:before {
+  left: -0.5em;
+}
+
+#btn-responsive {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 1400px) {
+  #btn-responsive {
+    display: none;
+  }
+}
+
+#btn-responsive .ligne {
+  height: 3px;
+  width: 30px;
+  background-color: #5baaa6;
+  margin: 5px;
+}
+
+.homepage {
+  background-image: url("/images/img-hp.png");
+  height: calc(100vh - 87px);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 0 100px;
+}
+
+.homepage h1 {
+  font-size: 58px;
+  font-family: "reklame-script", sans-serif;
+  color: #5baaa6;
+  margin-top: 100px;
+}
+
+.homepage #author {
+  font-size: 35px;
+  font-family: "reklame-script", sans-serif;
+  color: #5baaa6;
+}
+
+.homepage a {
+  color: #5baaa6;
+  font-size: 36px;
+  position: absolute;
+  bottom: 10%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.homepage a:hover {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.text {
+  background-color: #c0ce3a;
+  padding: 40px;
+  font-size: 18px;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+}
+
+.text img {
+  position: absolute;
+}
+
+#homepage-text .text {
+  margin: 140px 0 400px 20%;
+  max-width: 40%;
+}
+
+#homepage-text .text p:nth-child(2) {
+  margin-top: 20px;
+}
+
+#homepage-text .text img {
+  z-index: -1;
+  top: 40%;
+  left: 75%;
+  max-width: 100%;
+}
+
+footer {
+  background-color: #5baaa6;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer a {
+  color: white;
+}
+
+footer p {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+footer p:nth-child(2) {
+  margin: 0 10px;
+}
+/*# sourceMappingURL=main.css.map */
