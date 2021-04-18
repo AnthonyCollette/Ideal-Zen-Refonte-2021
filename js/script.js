@@ -8,3 +8,11 @@ burger.addEventListener("click", () => {
   navul.classList.toggle("nav-ul-show");
   article.classList.toggle("chevron-show");
 });
+
+const footer = document.querySelector("footer");
+const aScroll = document.getElementById("a-scroll-hp");
+
+aScroll.addEventListener("click", (e) => {
+  e.preventDefault();
+  footer.scrollIntoView({ behavior: "smooth", block: "end" });
+});
