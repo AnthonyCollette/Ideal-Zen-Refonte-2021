@@ -335,4 +335,35 @@ footer p {
 footer p:nth-child(2) {
   margin: 0 10px;
 }
+
+.up {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  bottom: 5vh;
+  left: 50px;
+  position: fixed;
+  z-index: 999;
+  background-color: #5baaa6;
+  color: white;
+  font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 30px;
+  border: 2px solid white;
+  padding-top: 10px;
+}
+
+@media (min-width: 992px) {
+  .up {
+    display: none;
+  }
+}
 /*# sourceMappingURL=main.css.map */
