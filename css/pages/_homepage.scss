@@ -97,11 +97,12 @@
         margin: 0;
         top: 60%;
         left: 75%;
-        max-width: 80%;
+        width: 80%;
       }
       @include breakpoint-up(xxl) {
-        top: 20%;
-        left: 60%;
+        top: 30%;
+        left: 75%;
+        width: 60%;
       }
     }
   }

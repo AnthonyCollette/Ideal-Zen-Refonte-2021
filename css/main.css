@@ -295,14 +295,15 @@ nav .nav-ul-show {
     margin: 0;
     top: 60%;
     left: 75%;
-    max-width: 80%;
+    width: 80%;
   }
 }
 
 @media (min-width: 1400px) {
   #homepage-text .text img {
-    top: 20%;
-    left: 60%;
+    top: 30%;
+    left: 75%;
+    width: 60%;
   }
 }
 
