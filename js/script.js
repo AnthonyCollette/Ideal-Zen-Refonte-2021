@@ -9,10 +9,10 @@ burger.addEventListener("click", () => {
   article.classList.toggle("chevron-show");
 });
 
-const footer = document.querySelector("footer");
+const homepage = document.getElementById("homepage-text");
 const aScroll = document.getElementById("a-scroll-hp");
 
 aScroll.addEventListener("click", (e) => {
   e.preventDefault();
-  footer.scrollIntoView({ behavior: "smooth", block: "end" });
+  homepage.scrollIntoView({ behavior: "smooth", block: "start" });
 });

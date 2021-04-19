@@ -1,22 +1,48 @@
 .homepage {
   background-image: url("../images/img-hp.png");
+  background-repeat: no-repeat;
   height: calc(100vh - 87px);
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 0 100px;
+  padding: 0 40px;
+  background-position-x: -490px;
+  @include breakpoint-up(lg) {
+    background-position-x: 0px;
+  }
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   h1 {
-    font-size: 58px;
+    font-size: 2em;
     font-family: $secondary-font;
     color: $primary-color;
-    margin-top: 100px;
+    margin-top: 50px;
+    text-align: center;
+
+    @include breakpoint-up(md) {
+      font-size: 2.7em;
+    }
+
+    @include breakpoint-up(xxl) {
+      margin-top: 100px;
+      font-size: 58px;
+    }
   }
   #author {
-    font-size: 35px;
+    margin-top: 20px;
+    font-size: 1.6em;
     font-family: $secondary-font;
     color: $primary-color;
+    @include breakpoint-up(md) {
+      font-size: 35px;
+    }
+    @include breakpoint-up(xxl) {
+    }
   }
   a {
     color: $primary-color;
@@ -37,24 +63,46 @@
   color: white;
   font-family: $primary-font;
   position: relative;
-  img {
-    position: absolute;
-  }
 }
 
 #homepage-text {
-  padding: 140px 0 400px 0;
+  width: 100%;
+  @include breakpoint-up(lg) {
+    padding: 100px 0 300px 0;
+    margin-left: 10%;
+    width: 80%;
+  }
+  @include breakpoint-up(xl) {
+    padding: 140px 0 400px 0;
+  }
+  @include breakpoint-up(xxl) {
+    padding: 140px 0 300px 0;
+  }
+  @include breakpoint-up(xxxl) {
+    padding: 140px 0 400px 0;
+  }
   .text {
-    margin-left: 20%;
-    max-width: 40%;
+    @include breakpoint-up(lg) {
+      max-width: 60%;
+    }
     p:nth-child(2) {
       margin-top: 20px;
     }
     img {
-      z-index: -1;
-      top: 40%;
-      left: 75%;
-      max-width: 100%;
+      margin-top: 50px;
+      width: 100%;
+      @include breakpoint-up(lg) {
+        position: absolute;
+        z-index: -1;
+        margin: 0;
+        top: 60%;
+        left: 75%;
+        max-width: 80%;
+      }
+      @include breakpoint-up(xxl) {
+        top: 20%;
+        left: 60%;
+      }
     }
   }
 }
