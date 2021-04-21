@@ -18,10 +18,6 @@
     align-items: center;
   }
   h1 {
-    font-size: 2em;
-    font-family: $secondary-font;
-    color: $primary-color;
-    margin-top: 50px;
     text-align: center;
 
     @include breakpoint-up(md) {

@@ -1,0 +1,229 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  .disclaimer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+    div:nth-child(2) {
+      background-color: $light-red;
+      color: white;
+      padding: 10px 0;
+      border-radius: 20px;
+      border: 4px solid $dark-red;
+      width: 800px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+    .danger {
+      position: absolute;
+      width: 65px;
+      height: 55px;
+      &:first-child {
+        left: -30px;
+      }
+      &:last-child {
+        right: -30px;
+      }
+    }
+    p {
+      font-size: 1.2em;
+      font-weight: 600;
+      @include breakpoint-up(lg) {
+        font-size: 22px;
+        max-width: 78%;
+      }
+    }
+  }
+  .services {
+    width: 100%;
+    margin: 100px 0 0 0;
+    > p {
+      font-weight: 600;
+    }
+    .services-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      .service-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        margin: 100px 50px 0 100px;
+      }
+      i {
+        font-size: 5em;
+        color: $primary-color;
+      }
+      h2 {
+        margin-top: 50px;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.3em;
+      }
+    }
+  }
+  .distance {
+    margin-top: 200px;
+    margin-bottom: 400px;
+    .text {
+      max-width: 40%;
+      margin-left: 275px;
+      img {
+        position: absolute;
+        width: 476px;
+        height: 322px;
+        left: 60%;
+        top: -10%;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.tarifs {
+  width: 100%;
+  margin-bottom: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .tarifs-content {
+    width: 100%;
+  }
+  .tarifs-wrapper {
+    display: flex;
+    justify-content: space-around;
+    button {
+      h2 {
+        text-transform: uppercase;
+        font-size: 22px;
+        color: white;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      i {
+        font-size: 70px;
+      }
+      &:hover,
+      &:active {
+        i {
+          color: $secondary-color;
+        }
+        h2 {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+  .text-buttons {
+    background-color: $secondary-color;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 50px;
+    animation: button-text 1s;
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .text-tarifs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      text-transform: uppercase;
+      font-size: 24px;
+      p {
+        font-weight: bold;
+        max-width: 26%;
+        text-align: center;
+      }
+    }
+  }
+  #text-1 {
+    position: relative;
+    display: none;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -25px;
+      left: 15%;
+      border-right: 20px solid transparent;
+      border-bottom: 34px solid $secondary-color;
+      border-left: 20px solid transparent;
+    }
+  }
+
+  #text-2 {
+    position: relative;
+    display: none;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -25px;
+      left: calc(50% - 17px);
+      border-right: 20px solid transparent;
+      border-bottom: 34px solid $secondary-color;
+      border-left: 20px solid transparent;
+    }
+    h3 {
+      margin-top: 20px;
+    }
+  }
+
+  #text-3 {
+    display: none;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -25px;
+      right: 15%;
+      border-right: 20px solid transparent;
+      border-bottom: 34px solid $secondary-color;
+      border-left: 20px solid transparent;
+    }
+    .text-tarifs {
+      p {
+        max-width: 18%;
+      }
+    }
+  }
+
+  .text-appear {
+    display: block !important;
+  }
+  .difficulties {
+    margin-top: 50px;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: $primary-font;
+    color: $secondary-color;
+    font-style: italic;
+    max-width: 40%;
+    text-align: center;
+    a {
+      color: $secondary-color;
+      transition-duration: 0.2s;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
