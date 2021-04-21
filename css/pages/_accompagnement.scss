@@ -2,8 +2,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  @include breakpoint-up(lg) {
+    max-width: 80%;
+    margin: 0 auto;
+  }
   .disclaimer {
     display: flex;
     align-items: center;
@@ -12,23 +15,38 @@ main {
     div:nth-child(2) {
       background-color: $primary-color;
       color: white;
-      padding: 10px 0;
+      padding: 50px 40px 40px 40px;
       border-radius: 20px;
       border: 4px solid $dark-blue;
-      width: 800px;
       text-align: center;
       display: flex;
       justify-content: center;
+      width: 70%;
+      margin: 0 auto;
+      @include breakpoint-up(lg) {
+        width: 800px;
+        padding: 10px 0;
+        max-width: 800px;
+      }
     }
     .danger {
       position: absolute;
       width: 65px;
       height: 55px;
       &:first-child {
-        left: -30px;
+        top: -30px;
+        left: calc(50% - 32.5px);
+        @include breakpoint-up(lg) {
+          top: 19%;
+          left: -30px;
+        }
       }
       &:last-child {
-        right: -30px;
+        display: none;
+        @include breakpoint-up(lg) {
+          display: block;
+          right: -30px;
+        }
       }
     }
     p {
@@ -42,48 +60,79 @@ main {
   }
   .services {
     width: 100%;
-    margin: 100px 0 0 0;
+    margin: 50px 0 0 0;
+    @include breakpoint-up(lg) {
+      margin: 100px 0 0 0;
+    }
+
     > p {
       font-weight: 600;
+      margin-left: 5%;
+      max-width: 90%;
+      @include breakpoint-up(lg) {
+        margin-left: 0;
+        max-width: 100%;
+      }
     }
+
     .services-wrapper {
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
       justify-content: center;
+      margin-top: 50px;
+      @include breakpoint-up(lg) {
+        margin-top: 0px;
+      }
       .service-details {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 300px;
-        margin: 100px 50px 0 100px;
+        margin: 40px auto;
+        @include breakpoint-up(lg) {
+          margin: 100px 50px 0 100px;
+        }
       }
       i {
         font-size: 5em;
         color: $primary-color;
       }
       h2 {
-        margin-top: 50px;
         text-transform: uppercase;
         text-align: center;
         font-size: 1.3em;
+        margin-top: 20px;
+        @include breakpoint-up(lg) {
+          margin-top: 50px;
+        }
       }
     }
   }
   .distance {
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin: 50px 0 80px 0;
+    margin-bottom: 80px;
+    @include breakpoint-up(lg) {
+      margin: 200px 0;
+    }
     .text {
-      max-width: 40%;
-      margin-left: 275px;
+      @include breakpoint-up(lg) {
+        max-width: 40%;
+        margin-left: 275px;
+      }
       img {
-        position: absolute;
-        width: 476px;
-        height: 322px;
-        left: 60%;
-        top: -10%;
-        z-index: -1;
+        width: 100%;
+        margin-top: 40px;
+        @include breakpoint-up(lg) {
+          position: absolute;
+          width: 476px;
+          height: 322px;
+          left: 60%;
+          top: -10%;
+          z-index: -1;
+          margin: 0;
+        }
       }
     }
   }
@@ -91,16 +140,25 @@ main {
 
 .tarifs {
   width: 100%;
-  margin-bottom: 300px;
+  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include breakpoint-up(lg) {
+    margin-bottom: 200px;
+  }
   .tarifs-content {
     width: 100%;
   }
   .tarifs-wrapper {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint-up(lg) {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
     button {
       h2 {
         text-transform: uppercase;
@@ -126,10 +184,15 @@ main {
   .text-buttons {
     background-color: $secondary-color;
     color: white;
-    padding: 40px;
-    border-radius: 20px;
-    margin-top: 50px;
-    animation: button-text 1s;
+    padding: 80px 40px 40px 40px;
+    border-radius: 0px;
+    animation: text 1s;
+    margin-top: 0;
+    @include breakpoint-up(lg) {
+      margin-top: 50px;
+      border-radius: 20px;
+      padding: 40px;
+    }
     h3 {
       font-size: 20px;
       font-weight: bold;
@@ -142,43 +205,70 @@ main {
       align-items: center;
       margin-top: 40px;
       text-transform: uppercase;
-      font-size: 24px;
+      font-size: 1.2em;
+      @include breakpoint-up(lg) {
+        font-size: 24px;
+      }
       p {
         font-weight: bold;
-        max-width: 26%;
         text-align: center;
+        max-width: 80%;
+        @include breakpoint-up(lg) {
+          max-width: 26%;
+        }
       }
     }
   }
   #text-1 {
-    position: relative;
     display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include breakpoint-up(lg) {
+      position: relative;
+    }
     &:before {
-      content: "";
-      position: absolute;
-      height: 0;
-      width: 0;
-      top: -25px;
-      left: 15%;
-      border-right: 20px solid transparent;
-      border-bottom: 34px solid $secondary-color;
-      border-left: 20px solid transparent;
+      display: none;
+      @include breakpoint-up(lg) {
+        display: block;
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: -25px;
+        left: 15%;
+        border-right: 20px solid transparent;
+        border-bottom: 34px solid $secondary-color;
+        border-left: 20px solid transparent;
+      }
     }
   }
 
   #text-2 {
-    position: relative;
     display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include breakpoint-up(lg) {
+      position: relative;
+    }
     &:before {
-      content: "";
-      position: absolute;
-      height: 0;
-      width: 0;
-      top: -25px;
-      left: calc(50% - 17px);
-      border-right: 20px solid transparent;
-      border-bottom: 34px solid $secondary-color;
-      border-left: 20px solid transparent;
+      display: none;
+      @include breakpoint-up(lg) {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: -25px;
+        left: calc(50% - 17px);
+        border-right: 20px solid transparent;
+        border-bottom: 34px solid $secondary-color;
+        border-left: 20px solid transparent;
+      }
     }
     h3 {
       margin-top: 20px;
@@ -187,21 +277,34 @@ main {
 
   #text-3 {
     display: none;
-    position: relative;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include breakpoint-up(lg) {
+      position: relative;
+    }
     &:before {
-      content: "";
-      position: absolute;
-      height: 0;
-      width: 0;
-      top: -25px;
-      right: 15%;
-      border-right: 20px solid transparent;
-      border-bottom: 34px solid $secondary-color;
-      border-left: 20px solid transparent;
+      display: none;
+      @include breakpoint-up(lg) {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: -25px;
+        right: 15%;
+        border-right: 20px solid transparent;
+        border-bottom: 34px solid $secondary-color;
+        border-left: 20px solid transparent;
+      }
     }
     .text-tarifs {
       p {
-        max-width: 18%;
+        max-width: 70%;
+        @include breakpoint-up(lg) {
+          max-width: 18%;
+        }
       }
     }
   }
@@ -209,6 +312,7 @@ main {
   .text-appear {
     display: block !important;
   }
+
   .difficulties {
     margin-top: 50px;
     font-size: 22px;
@@ -216,8 +320,11 @@ main {
     font-family: $primary-font;
     color: $secondary-color;
     font-style: italic;
-    max-width: 40%;
     text-align: center;
+    max-width: 100%;
+    @include breakpoint-up(lg) {
+      max-width: 40%;
+    }
     a {
       color: $secondary-color;
       transition-duration: 0.2s;

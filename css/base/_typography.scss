@@ -5,6 +5,7 @@ h1 {
   font-family: $secondary-font;
   color: $primary-color;
   margin-top: 50px;
+  text-align: center;
   @include breakpoint-up(lg) {
     font-size: 68px;
   }
