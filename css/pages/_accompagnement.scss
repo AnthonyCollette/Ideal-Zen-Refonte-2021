@@ -8,7 +8,7 @@ main {
     display: flex;
     align-items: center;
     position: relative;
-    margin-top: 100px;
+    margin-bottom: 100px;
     div:nth-child(2) {
       background-color: $light-red;
       color: white;
@@ -73,7 +73,7 @@ main {
   }
   .distance {
     margin-top: 200px;
-    margin-bottom: 400px;
+    margin-bottom: 200px;
     .text {
       max-width: 40%;
       margin-left: 275px;
