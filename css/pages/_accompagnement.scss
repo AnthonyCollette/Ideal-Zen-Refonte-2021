@@ -188,6 +188,7 @@ main {
     border-radius: 0px;
     animation: text 1s;
     margin-top: 0;
+    overflow-y: scroll;
     @include breakpoint-up(lg) {
       margin-top: 50px;
       border-radius: 20px;
@@ -202,19 +203,23 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       margin-top: 40px;
-      text-transform: uppercase;
       font-size: 1.2em;
       @include breakpoint-up(lg) {
         font-size: 24px;
+        align-items: center;
       }
-      p {
+      h4 {
         font-weight: bold;
-        text-align: center;
-        max-width: 80%;
+        text-transform: uppercase;
+      }
+      .tarifs-details {
+        max-width: 100%;
+        font-size: 0.9em;
         @include breakpoint-up(lg) {
-          max-width: 26%;
+          text-align: center;
+          font-size: 20px;
         }
       }
     }
@@ -326,10 +331,10 @@ main {
       max-width: 40%;
     }
     a {
-      color: $secondary-color;
+      color: $primary-color;
       transition-duration: 0.2s;
       &:hover {
-        color: $primary-color;
+        color: $secondary-color;
       }
     }
   }
